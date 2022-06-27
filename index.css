@@ -1,14 +1,13 @@
 body{
-    margin: 0px;
-    padding: 0px;
+    padding: 20px auto 20px auto;
 }
 .app{
     width: 95%;
     height: 95%;
-    margin: 10px auto 10px auto;
+    margin: 20px auto 20px auto;
     display: grid;
-    grid-template-columns: 25% 75% ;
-    grid-template-rows: 270px 270px 800px;
+    grid-template-columns: 365px 1090px ;
+    grid-template-rows: 270px 270px 840px;
 }
 .head{
     grid-column: 1/2;
@@ -64,8 +63,7 @@ body{
     line-height: 2px;
 }
 .information{
-    margin: 60px 20px 20px 20px;
-    padding-left: 10px;
+    margin: 60px 20px 20px 10px;
     background :linear-gradient(to right ,rgb(230, 181, 170) ,white);
 }
 .head div:nth-child(4) img{
@@ -80,7 +78,7 @@ body{
 }
 .detail p{
     font-size: 20px;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 .mobile{
     margin: 0px 0px 0px 0px;
@@ -98,7 +96,7 @@ body{
     float:inline-start
 }
 .detail2 p{
-    margin: 3px 0px 5px 20px;
+    margin: 3px 0px 5px 10px;
     font-size: 20px;
 }
 .detail2 p:nth-child(3){
@@ -188,21 +186,81 @@ body{
 }
 .projectChild{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content:  center ;
-    align-items: flex-start ;
-    margin: 5px auto 20px auto;
+    align-items: flex-end ;
+    margin: 5px auto 40px auto;
 }
 .picEle{
     margin: 0px 0px 0px 30px;
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: space-around ;
 }
-.project img{
-    width: 350px;
-    height: 140px;  
+.picEle h4{
+    width: 100%;
+}
+.project img:nth-child(2){
+    width: 390px;
+    height: 200px;  
+    max-width: 100%;
+
+}
+.project img:nth-child(3){
+    width: 160px;
+    height: 250px;  
 }
 .content{
     margin: 0px 0px 0px 40px;
 }
 .content p{
     margin: 10px 0px 10px 0px;
+}
+
+@media print{
+    body{
+        padding: 20px auto 20px auto;
+    }
+    .app{
+        width: 95%;
+        height: 95%;
+        margin: 70px auto 0px auto;
+        display: grid;
+        grid-template-columns: 320px 800px ;
+        grid-template-rows: 300px 300px 900px;
+    }
+    .head{
+        grid-column: 1/2;
+        grid-row: 1/4;
+        background :linear-gradient(to right ,rgb(230, 181, 170) ,white);
+        /* margin: 20px 0px 0px 0px; */
+    }
+    .picEle h4{
+        width: 100%;
+        text-align: center;
+        margin: 15px 0px 10px 0px;
+        /* display: none; */
+    }
+    .project img:nth-child(2){
+        width: 320px;
+        height: 130px;  
+    }
+    .project img:nth-child(3){
+        width: 120px;
+        height: 150px;  
+    }
+    .projectChild{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center ;
+        align-items: flex-start ;
+        margin: 5px auto 20px auto;
+    }
+    .content{
+        display: flex;
+        margin: 0px 0px 0px 20px;
+    }
+    @page {
+		size: A4;
+	}
 }
